@@ -1,0 +1,166 @@
+@font-face {
+  font-family: Bold;
+  src: url('fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: Light;
+  src: url('fonts/OpenSans-Light.ttf');
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  height: 130px;
+  color: white;
+  background-color: #191919;
+}
+
+.abstr {
+  padding-right: 0px;
+  margin-top: 0px;
+  height: 100%;
+  color: #191919;
+  font-family: Bold;
+  font-size: 48px;
+  text-align: right;
+  background-color: white;
+  padding-top: 35px;
+}
+
+.act {
+  padding-top: 35px;
+  padding-left: 0px;
+  height: 100%;
+  margin-top: 0px;
+  font-family: Bold;
+  font-size: 48px;
+  text-align: left;
+}
+
+a {
+  font-family: Light;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 1px;
+  color: #191919;
+  transition: all 500ms;
+}
+
+.links {
+  margin-top: 55px;
+  text-align: right;
+}
+
+.left_sidebar {
+  margin-left: 55px;
+  margin-top: 35px;
+  position: absolute;
+  height: 100%;
+}
+
+.first_line {
+  margin-bottom: -20px;
+  background-color: #191919;
+  height: 1px;
+}
+
+.second_line {
+  background-color: #191919;
+  height: 1px;
+}
+
+.description {
+  margin-top: 65px;
+  font-family: Light;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.main {
+  position: absolute;
+  left: 369px;
+  height: 100%;
+}
+
+input {
+  font-family: Light;
+  font-size: 20px;
+}
+
+#keywords {
+  margin-left: 150px;
+  border: none;
+  border-bottom: 1px solid #191919;
+  width: 300px;
+}
+
+#txt {
+  margin-left: 150px;
+  border: none;
+  border-bottom: 1px solid #191919;
+  width: 600px;
+}
+
+.keywords {
+  font-family: Light;
+  font-size: 20px;
+  margin-top: 100px;
+  margin-left: 150px;
+}
+
+.txt {
+  margin-top: 40px;
+  font-family: Light;
+  font-size: 20px;
+  margin-left: 150px;
+}
+
+.forms {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.submit {
+  font-family: Light;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid #191919;
+  margin-top: 60px;
+  margin-left: 150px;
+  width: 300px;
+  padding: 20px;
+}
+
+.submit:hover {
+  background-color: #191919;
+  color: white;
+  transition: all 500ms;
+}
+
+@media(max-width: 768px) {
+  .main {left: 0px;}
+  #txt {width: 300px;}
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .main{left: 0px;}
+}

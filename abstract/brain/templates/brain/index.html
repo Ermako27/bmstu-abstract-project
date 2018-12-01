@@ -1,0 +1,35 @@
+{% extends 'brain/base.html' %}
+
+{% block content %}
+
+  <aside class="left_sidebar col-lg-3 col-md-3 hidden-sm hidden-xs col-lg-offset-1 col-md-offset-1">
+    <hr class="first_line">
+    <article class="description">
+      Создание конспекта на основе текста
+      Веб-приложение, которое будет генерировать краткий конспект для заданного текста. Конспект будет представлять из себя набор предложений текста, которые имеют наибольшую близость с ключевыми словами. Ключевые слова вычленеяются по средствам обученной модели word2vec. Реализация приложения предполагется на основе Django и должна включать в себя базовый функцонал по загрузке текста и вывода конспекта для этого текста.
+    </article>
+    <hr class="second_line">
+  </aside>
+  <section class="main col-lg-8 col-md-8">
+    <form action="/" method="POST">
+      {% csrf_token %}
+      <span class="forms col-lg-8 col-md-8 col-sm-8 col-xs-5">
+        <label class="keywords" for="keywords">Ключевые слова</label></br>
+        <input id="keywords" type="text" name="keywords" value="{{ keywords }}"/></br>
+        <label class="txt" for="text">Текст</label></br>
+        <textarea id="txt" rows="10" cols="45" name="text" required>{{ text }}</textarea>
+        <input class="submit" type="submit" value="Запуск">
+      </span>
+    </form>
+    <form action="/" method="POST">
+      {% csrf_token %}
+      <span class="forms col-lg-8 col-md-8 col-sm-8 col-xs-5">
+      {% for line in out_data %}
+        {{ line }} <br>
+      {% endfor %}
+      </span>
+
+    </form>
+  </section>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+
+<head>
+  <title>Abstract</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+</head>
+<body>
+  <header>
+    <h1 class="abstr col-lg-2 col-md-2 col-sm-3 col-xs-5">Abstr</h1>
+    <h1 class="act col-lg-5 col-md-5 col-sm-5 col-xs-2">act</h1>
+  </header>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
